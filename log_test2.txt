@@ -1,0 +1,127 @@
+teste
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Time: 0.112688 seconds
+teste
+Time: 0.086719 seconds
+teste
+Time: 0.156659 seconds
+teste
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Time: 0.091297 seconds
+teste
+teste
+teste
+Time: 0.160174 seconds
+teste
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Time: 0.090446 seconds
+teste
+Time: 0.068143 seconds
+teste
+teste
+Error : date exists
+Time: 0.161822 seconds
+teste
+Error : date exists
+Error : date exists
+Time: 0.149144 seconds
+teste
+Time: 0.171308 seconds
+teste
+Time: 0.160147 seconds
+teste
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Time: 0.081524 seconds
+teste
+Error : date exists
+Error : date exists
+Time: 0.151927 seconds
+teste
+Error : date exists
+Time: 0.158924 seconds
+teste
+Error : date exists
+Error : date exists
+Error : date exists
+Time: 0.066926 seconds
+teste
+Time: 0.166049 seconds
+teste
+Time: 0.169729 seconds
+teste
+Time: 0.164763 seconds
+teste
+Time: 0.165731 seconds
+teste
+Time: 0.066999 seconds
+teste
+Error : date exists
+Error : date exists
+Time: 0.065684 seconds
+teste
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Time: 0.103069 seconds
+teste
+Error : date exists
+Time: 0.124599 seconds
+teste
+Time: 0.152213 seconds
+teste
+Time: 0.218515 seconds
+teste
+Time: 0.150381 seconds
+teste
+Time: 0.158456 seconds

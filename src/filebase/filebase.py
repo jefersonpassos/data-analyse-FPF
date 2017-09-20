@@ -1,9 +1,12 @@
 import os
 import msgpack
 import pandas as pd
+import time
 
 class Filebase(object):
 	path_default = "/tmp/filebase"
+	cache = {}
+	cache_status = {}
 
 	def __init__(self, path):
 		self.path_default = path
@@ -17,7 +20,7 @@ class Filebase(object):
 		if self.created_path(self.collection) :
 			_file = self.collection + "/" + index
 			if os.path.isfile(_file + ".fbd") or os.path.isfile(_file + ".pd.fbd"):
-				raise Exception("Error: index exist. Use update for modify file")
+				raise Exception("Error: index exist. Use update() for modify file")
 			else:
 				if type(value) is pd.DataFrame:
 					serialized = msgpack.packb(value.to_dict(orient='list'))
@@ -43,14 +46,69 @@ class Filebase(object):
 
 	def update(self, index, value):
 		if self.created_path(self.collection) :
-			_file = self.collection + "/" + index + ".bin"
-			if not os.path.isfile(_file):
-				raise Exception("Error: index not exist. Use create for create file")
+			_file = self.collection + "/" + index
+			if os.path.isfile(_file + ".fbd") or os.path.isfile(_file + ".pd.fbd"):
+				if type(value) is pd.DataFrame:
+					serialized = msgpack.packb(value.to_dict(orient='list'))
+					with open(_file + ".pd.fbd", "wb") as file:
+						file.write(serialized)
+				else:
+					serialized = msgpack.packb(value)
+					with open(_file + "fbd", "wb") as file:
+						file.write(serialized)
 			else:
-				serialized = msgpack.packb(value)
-				with open(_file, "wb") as file:
-					file.write(serialized)
+				raise Exception("Error: index not exist. Use create() for create file")
 		return True
+
+	def insert(self, index, value):
+		if self.created_path(self.collection):
+			_file = self.collection + "/" + index
+			if type(value) is pd.DataFrame:
+				if os.path.isfile(_file + ".pd.fbd"):
+					df_old = self.read(index)
+					df_new =  pd.concat([df_old, value])
+					self.update(index, df_new)
+				else:
+					raise Exception("Error: file is not format DataFrame")
+			else :
+				if os.path.isfile(_file + ".fbd"):
+					file_old = self.read(index)
+					file_new = file_old + value
+					self.update(index, file_new)
+				else:
+					raise Exception("Error: file is format DataFrame")
+
+	def schema(self, index):
+		_file = self.collection + "/" + index
+		if os.path.isfile(_file + ".pd.fbd"):
+			df = self.read(index)
+			_schmea = {
+				"columns" : df.columns,
+				"shape" : df.shape,
+				"types" : df.ftypes,
+				"memory" : df.memory_usage(),
+			}
+			return _schmea
+		else:
+			raise Exception("Error: file is not format DataFrame")
+
+	def verify_index(self, index):
+		_file = self.collection + "/" + index
+		if os.path.isfile(_file + ".fbd"):
+			return "file"
+		elif os.path.isfile(_file + ".pd.fbd"):
+			return "pd"
+		else:
+			return False
+
+	def list_collections(self, path = None):
+		if path:
+			_path = self.collection + "/" + path
+		else:
+			_path = self.collection
+
+		collections = os.listdir(_path)
+		return collections
 
 	def created_path(self, path):
 		if os.path.exists(path):

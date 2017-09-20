@@ -1,0 +1,46 @@
+teste
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Time: 0.108768 seconds
+              2017-04-12 17:30:002017-04-12 17:30:00SMP9_GGSN2017-04-12 17:30:00DROPDOWN_GGSNSMP9_EPG2017-04-12 17:30:002017-04-12 17:30:00SMP8_GGSNDROPDOWN_EPG2017-04-12 17:30:00SMP8_EPGSuccess ; 12/04/2017 17:46:24
+Success ; 12/04/2017 17:46:24
+2017-04-12 17:30:00RADIUSACC_EPG2017-04-12 17:30:00DROPUP_GGSN2017-04-12 17:30:00CONNECTIONS_GGSNSuccess ; 12/04/2017 17:46:24
+Success ; 12/04/2017 17:46:24
+2017-04-12 17:30:00RADIUS_GGSN2017-04-12 17:30:00Success ; 12/04/2017 17:46:24
+Success ; 12/04/2017 17:46:24
+DROPUP_EPGSuccess ; 12/04/2017 17:46:24
+Success ; 12/04/2017 17:46:24
+2017-04-12 17:30:00CONNECTIONS_EPGSuccess ; 12/04/2017 17:46:24
+Success ; 12/04/2017 17:46:24
+Success ; 12/04/2017 17:46:24
+2017-04-12 17:30:00RADIUS_EPG2017-04-12 17:30:00RADIUSACC_GGSNSuccess ; 12/04/2017 17:46:24
+Success ; 12/04/2017 17:46:24
+Success ; 12/04/2017 17:46:24
+teste
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Error : date exists
+Time: 0.076888 seconds
